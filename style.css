@@ -34,7 +34,7 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -51,7 +51,7 @@ section {
     border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
 
-.logo{
+.logo {
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
@@ -81,7 +81,7 @@ section {
     align-items: center;
 }
 
-.home-img img{
+.home-img img {
     width: 35vw;
     animation: floatImage 4s ease-in-out infinite;
 }
@@ -90,9 +90,11 @@ section {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-2.4rem);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -103,7 +105,7 @@ section {
     font-weight: 700;
 }
 
-.home-content h3:nth-of-type(2){
+.home-content h3:nth-of-type(2) {
     margin-bottom: 2rem;
 }
 
@@ -120,7 +122,7 @@ span {
     font-size: 1.6rem;
 }
 
-.social-media a{
+.social-media a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -135,7 +137,7 @@ span {
     transition: .5s ease;
 }
 
-.social-media a:hover{
+.social-media a:hover {
     background: var(--main-color);
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
@@ -162,12 +164,12 @@ span {
 
 /* *******======== PORTFOLIO PAGE DESIGN START ========*******  */
 
-.heading{
+.heading {
     text-align: center;
     font-size: 4.5rem;
 }
 
-.portfolio{
+.portfolio {
     background: var(--second-bg-color);
 }
 
@@ -248,7 +250,7 @@ span {
 
 /* *******======== CERTIFICATE PAGE DESIGN START ========*******  */
 
-.heading{
+.heading {
     text-align: center;
     font-size: 4.5rem;
 }
@@ -340,7 +342,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background:var(--second-bg-color);
+    background: var(--second-bg-color);
 }
 
 .footer-text p {
@@ -370,7 +372,7 @@ span {
 
 /* BREAKPOINTS */
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
     html {
         font-size: 55%;
     }
@@ -400,7 +402,7 @@ span {
 
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     #menu-icon {
         display: block;
     }
@@ -418,7 +420,7 @@ span {
         display: none;
     }
 
-    .navbar.active{
+    .navbar.active {
         display: block;
     }
 
@@ -432,7 +434,7 @@ span {
         flex-direction: column;
     }
 
-    .home-content  h3 {
+    .home-content h3 {
         font-size: 2.6rem;
     }
 
@@ -450,7 +452,7 @@ span {
     }
 
     .portfolio-container {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .certificate h2 {
@@ -458,11 +460,11 @@ span {
     }
 
     .certificate-container {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 617px){
+@media (max-width: 617px) {
     .portfolio-container {
         grid-template-columns: 1fr;
     }
@@ -472,13 +474,13 @@ span {
     }
 }
 
-@media (max-width: 450px){
+@media (max-width: 450px) {
     html {
         font-size: 50%;
     }
 }
 
-@media (max-width: 365px){
+@media (max-width: 365px) {
     .home-img img {
         width: 90vw;
     }
@@ -491,4 +493,18 @@ span {
         text-align: center;
         margin-top: 2rem;
     }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--main-color);
+    border-left: 1px solid var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--second-bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--bg-color);
 }
