@@ -54,7 +54,7 @@ ScrollReveal().reveal('.home-content p', { origin: 'right'});
 // ====================  typed js ====================== //
 
 const typed = new Typed('.multiple-text',{
-    strings: ['Yazılım Geliştiricisiyim.', 'Öğrenciyim', 'Blog Yazarıyım.'],
+    strings: ['Yazılım Geliştiricisiyim.', 'Öğrenciyim.', 'Blog Yazarıyım.'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
