@@ -248,7 +248,7 @@ span {
 }
 
 .timeline-content h3 {
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     margin: 0 0 10px;
     font-weight: 500;
@@ -256,9 +256,9 @@ span {
 
 .timeline-content p {
     color: white;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 300;
-    line-height: 22px;
+    line-height: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -504,7 +504,7 @@ span {
     }
 
     .experience {
-        padding: 7rem;
+        padding-bottom: 7rem;
     }
 
     .certificate {
@@ -572,7 +572,10 @@ span {
     }
 
     .experience h2 {
-        margin-bottom: 3rem;
+        margin-bottom: 3rem;    
+    }
+
+    .timeline-items {
         grid-template-columns: repeat(2, 1fr);
     }
 
