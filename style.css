@@ -503,6 +503,10 @@ span {
         padding-bottom: 7rem;
     }
 
+    .experience {
+        padding: 7rem;
+    }
+
     .certificate {
         padding-bottom: 7rem;
     }
@@ -567,6 +571,11 @@ span {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .experience h2 {
+        margin-bottom: 3rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .certificate h2 {
         margin-bottom: 3rem;
     }
@@ -578,6 +587,10 @@ span {
 
 @media (max-width: 617px) {
     .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-items {
         grid-template-columns: 1fr;
     }
 
