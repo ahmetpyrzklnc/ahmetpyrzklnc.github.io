@@ -22,9 +22,10 @@
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="#home" class="active">Hakkımda</a>
-            <a href="#portfolio">Projelerim</a>
-            <a href="https://drive.google.com/drive/folders/1LxFhMQ0W7DaziNI7eP6t9So3p4duF2Jf?usp=sharing" target="_blank">Sertifikalarım</a>
+            <a id = "home-link" href="#home" class="active">Hakkımda</a>
+            <a id = "portfolio-link" href="#portfolio">Projelerim</a>
+            <a id = "certificates-link" href="https://drive.google.com/drive/folders/1LxFhMQ0W7DaziNI7eP6t9So3p4duF2Jf?usp=sharing" target="_blank">Sertifikalarım</a>
+            <button id="language-toggle" onclick="toggleLanguage()">EN</button> <!-- Dil seçici buton -->
         </nav>
     </header>
 
@@ -32,15 +33,15 @@
 
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Merhabalar, ben</h3>
+            <h3 id="welcome-text" >Merhabalar, ben</h3>
             <h1>Ahmet Kılınç</h1>
-            <h3>Ben bir <span class="multiple-text"></span></h3>
-            <p>2020 senesi pandemi dönemiyle başladığım yazılım merakımı,
+            <h3 id="my-text-container">Ben bir <span class="multiple-text"></span></h3>
+            <p id="developing-text">2020 senesi pandemi dönemiyle başladığım yazılım merakımı,
                 2021 senesinde kazanmış olduğum, Yönetim Bilişim Sistemleri (MIS) ile devam ettirmekteyim.
             </p>
-            <p>Genel olarak Veri Bilimi, Veri Analizi ve</p>
+            <p id="developing-text">Genel olarak Veri Bilimi, Veri Analizi ve</p>
 
-            <p>Makine öğrenmesi alanlarında kendimi günden güne geliştirmekteyim.</p>
+            <p id="developing-text">Makine öğrenmesi alanlarında kendimi günden güne geliştirmekteyim.</p>
 
             <div class="social-media">
                 <a href="https://instagram.com/ahmtklnc_?igshid=NTE5MzUyOTU=" style="--i:5" alt="instagram"

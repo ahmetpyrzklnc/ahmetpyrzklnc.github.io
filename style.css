@@ -508,3 +508,17 @@ span {
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--bg-color);
 }
+
+#language-toggle {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+#language-toggle:hover {
+    background-color: #555;
+}

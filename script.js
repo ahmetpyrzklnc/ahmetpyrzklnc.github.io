@@ -1,3 +1,84 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const translations = {
+        tr: {
+            home: "Hakkımda",
+            portfolio: "Projelerim",
+            certificates: "Sertifikalarım",
+            welcome: "Merhabalar, ben",
+            my: 'Ben bir <span class="multiple-text"></span>',
+            introduction: "2020 senesi pandemi dönemiyle başladığım yazılım merakımı, 2021 senesinde kazanmış olduğum, Yönetim Bilişim Sistemleri (MIS) ile devam ettirmekteyim.",
+            developing: "Genel olarak Veri Bilimi, Veri Analizi ve Makine öğrenmesi alanlarında kendimi günden güne geliştirmekteyim.",
+            contact: "Bana Ulaşın!"
+        },
+        en: {
+            home: "About Me",
+            portfolio: "Projects",
+            certificates: "Certificates",
+            welcome: "Hello, I am",
+            my: 'I am a <span class="multiple-text"></span>',
+            introduction: "Starting my programming interest in the pandemic period of 2020, I am continuing it with Management Information Systems (MIS) that I won in 2021.",
+            developing: "I am continuously developing myself in the fields of Data Science, Data Analysis, and Machine Learning.",
+            contact: "Contact Me!"
+        }
+    };
+
+    const texts = {
+        tr: ['Yazılım Geliştiricisiyim.', 'Öğrenciyim.', 'Blog Yazarıyım.'],
+        en: ['I am a Software Developer.', 'I am a Student.', 'I am a Blogger.']
+    };
+
+    let typed = new Typed('.multiple-text', {
+        strings: texts[document.documentElement.lang] || texts['tr'],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true
+    });
+
+    window.toggleLanguage = function() {
+        const currentLang = document.documentElement.lang === "tr" ? "en" : "tr";
+        document.documentElement.lang = currentLang;
+
+        const homeLink = document.getElementById("home-link");
+        const portfolioLink = document.getElementById("portfolio-link");
+        const certificatesLink = document.getElementById("certificates-link");
+        const welcomeText = document.getElementById("welcome-text");
+        const myTextContainer = document.getElementById("my-text-container");
+        const introductionText = document.getElementById("introduction-text");
+        const developingText = document.getElementById("developing-text");
+        const contactButton = document.getElementById("contact-button");
+        const languageToggle = document.getElementById("language-toggle");
+
+        // ID'leri kontrol et
+        if (homeLink && portfolioLink && certificatesLink && welcomeText && myTextContainer && introductionText && developingText && contactButton && languageToggle) {
+            homeLink.textContent = translations[currentLang].home;
+            portfolioLink.textContent = translations[currentLang].portfolio;
+            certificatesLink.textContent = translations[currentLang].certificates;
+            welcomeText.textContent = translations[currentLang].welcome;
+            myTextContainer.innerHTML = translations[currentLang].my;
+            introductionText.textContent = translations[currentLang].introduction;
+            developingText.textContent = translations[currentLang].developing;
+            contactButton.textContent = translations[currentLang].contact;
+
+            languageToggle.textContent = currentLang === "tr" ? "EN" : "TR";
+
+            // Update Typed.js instance
+            typed.destroy(); // Destroy the old instance
+            typed = new Typed('.multiple-text', {
+                strings: texts[currentLang],
+                typeSpeed: 100,
+                backSpeed: 100,
+                backDelay: 1000,
+                loop: true
+            });
+        } else {
+            console.error("Some elements are missing or have incorrect IDs");
+        }
+    };
+
+    // Sayfa yüklendiğinde başlangıç dili ayarla
+    document.documentElement.lang = 'tr';
+});
 // *******==================== toogle icon ======================***** //
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -53,10 +134,4 @@ ScrollReveal().reveal('.home-content p', { origin: 'right'});
 
 // ====================  typed js ====================== //
 
-const typed = new Typed('.multiple-text',{
-    strings: ['Yazılım Geliştiricisiyim.', 'Öğrenciyim.', 'Blog Yazarıyım.'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-});
+
